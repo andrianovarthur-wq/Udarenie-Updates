@@ -9,6 +9,11 @@ if(!native&&'serviceWorker' in navigator){
   const notify=()=>{if(reg.waiting){updateState={status:'web-ready',message:'Новая версия готова. Ваш прогресс сохранится.'};window.dispatchEvent(new Event('update-state'));}};
   notify();reg.addEventListener('updatefound',()=>{const worker=reg.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed'&&navigator.serviceWorker.controller)notify();});});
  }).catch(()=>{});
- let refreshing=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!refreshing){refreshing=true;location.reload();}});
+ let controller=navigator.serviceWorker.controller,refreshing=false;
+ navigator.serviceWorker.addEventListener('controllerchange',()=>{
+  // First installation claims the page without interrupting the user's form or training.
+  if(controller&&!refreshing){refreshing=true;location.reload();}
+  controller=navigator.serviceWorker.controller;
+ });
 }
 export async function applyWebUpdate(){const reg=await navigator.serviceWorker.getRegistration();reg?.waiting?.postMessage({type:'ACTIVATE_UPDATE'});}
