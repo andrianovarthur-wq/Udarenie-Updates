@@ -1,1 +1,1 @@
-export const config={version:'1.2.3',build:1003,site:'https://andrianovarthur-wq.github.io/Udarenie-Updates/',apk:'https://andrianovarthur-wq.github.io/Udarenie-Updates/udarenie.apk',manifest:'https://andrianovarthur-wq.github.io/Udarenie-Updates/update-manifest.json'};
+export const config={version:'1.2.4',build:1004,site:'https://andrianovarthur-wq.github.io/Udarenie-Updates/',apk:'https://andrianovarthur-wq.github.io/Udarenie-Updates/udarenie.apk',manifest:'https://andrianovarthur-wq.github.io/Udarenie-Updates/update-manifest.json'};
