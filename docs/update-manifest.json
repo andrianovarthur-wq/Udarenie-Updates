@@ -1,0 +1,10 @@
+{
+  "version": "1.2.0",
+  "build": 1000,
+  "notes": "Обновление приложения «Ударение». Прогресс и ваши слова сохраняются.",
+  "android": {
+    "url": "https://andrianovarthur-wq.github.io/Udarenie-Updates/udarenie-1000.apk",
+    "sha256": "6c76ab80971f733436cce2fd29d2f38766167174ce6e4c71ca365c1f9a28c555",
+    "size": 1936400
+  }
+}
